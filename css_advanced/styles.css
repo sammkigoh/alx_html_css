@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    width: 1103.41px;
+    height: 29.46px;
+}
+/* .navbar {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+} */
+.navbar ul {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    align-items: center;
+    flex-direction: column;
+}
+.navbar img {
+    height: 29.46px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-top: auto;
+}
+.navbar a{
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Source Sans Pro;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px;
+    float: right;
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+/* main {
+    max-width: 100%;
+    height: auto;
+    display: block;
+} */
+.mainbanner {
+    background-image: url(mainbanner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+.mainbanner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: -1; /* Place behind the content */
+}
+#smileschool {
+    font-family: Spin-Cycle-OT;
+    width: 111.83px;
+    height: 12.58px;
+}
+#mainheader {
+    color: white;
+    font-family: Source Sans Pro;
+    font-size: 120px;
+    font-weight: bold;
+    text-align: center;
+}
+.smiles {
+    color: white;
+    text-align: center;
+    font-family: Source Sans Pro;
+    font-size: 16px;
+    display: block;
+    gap: 0;
+}
+span{
+    margin-top: 59px;
+    margin-right: 59px;
+}
+/* span {
+    color: white;
+    font-family: Source Sans Pro;
+    font-size: 16px;
+} */
+button {
+    color: white;
+    font-family: Source Sans Pro;
+    background-color: #C271FF;
+    border-radius: 22px;
+    width: 162px;
+    height: 44px;
+    border-color: #C271FF;
+}
+.registerforfree {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 44px;
+margin-top: 38px;
+}
+#h2_banner {
+    font-size: 32px;
+    font-family: Source Sans Pro;
+    text-align: center;
+}
+#h2_banner .color1 {
+    color: #C271FF;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+#h2_banner .color2 {
+    color: white;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+.pros-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+.pros {
+    background-color: transparent;
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px;
+    flex: 1 1 calc(25% - 40px);
+    margin: 10px;
+    color: white;
+    font-family: Source Sans Pro;
+}
+.pros img {
+    max-width: 100%;
+    border-radius: 50%;
+    height: auto;
+    width: 150px;
+}
+.pros h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+.pros p {
+    font-size: 16px;
+    font-style: italic;
+    font-weight: normal;
+}
