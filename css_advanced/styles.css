@@ -316,3 +316,61 @@ margin-right: 6px;
     font-size: 14px;
     color: #666;
 }
+.membership-container {
+    background-color:#071629 ;
+    padding: 50px 0;
+    text-align: center;
+}
+#free-membership {
+   font-family: Source Sans Pro;
+   font-size: 32px; 
+   text-align: center;
+   padding-top: 70px;
+   margin-bottom: 30px;
+}
+#free-membership .color1 {
+color: #C271FF;
+margin-left: 2px;
+margin-right: 6px;
+}
+#free-membership .color2 {
+color: white;
+margin-left: 2px;
+margin-right: 6px;
+font-weight: normal;
+}
+.memberships {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+.membership {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: Source Sans Pro ;
+    width: 257px;
+    height: 153px;
+    padding-bottom: 85px;
+    padding-right: 27px;
+}
+.membership h3 {
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 13;
+}
+.membership p {
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    width: 212px ;
+}
+.membership img {
+    width: 43.67px;
+    height: 35.35px;
+    margin-right: 5px;
+}
+
+
