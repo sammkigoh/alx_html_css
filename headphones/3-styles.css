@@ -1,21 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    max-width: 100%;
+    width: 100%;
     font-family: Source Sans Pro;
+    overflow-x: hidden;
 }
 .navigation-bar {
     position: absolute;
     display: flex;
     justify-content: space-between;
-    padding-top: 27px;
-    padding-right: 200px;
+    padding: 15px 20px;
     top: 0;
     left: 0;
+    right: 0;
     width: 100%;
     align-items: center;
     z-index: 10;
+    margin:auto;
 }
 .nav-links {
     list-style: none;
@@ -42,8 +49,6 @@ body {
     margin-right: auto;
     width: 161px;
     height: 32px;
-    padding-left: 200px;
-    padding-top:27.76px;
 }
 #menu-toggle {
     display: none;
@@ -53,11 +58,16 @@ body {
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
+    order: -1;
 }
 .hamburger span {
     width: 25px;
     height: 3px;
     background-color: white;
+}
+.nav-links-container {
+    display: flex;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
 }
 .main-banner {
     background-image: url(headphones_hero_1.jpg);
@@ -65,7 +75,6 @@ body {
     background-size: cover;
     background-position: center center;
     min-height: 100vh;
-    max-width: 100%;
     color: white;
     display: flex;
     flex-direction: column;
@@ -73,6 +82,8 @@ body {
     justify-content: center;
     text-align: center;
     position: relative;
+    padding: 20px;
+    width: 100%;
 }
 .content-wrapper {
     display: flex;
@@ -138,6 +149,7 @@ button:hover button:active {
 }
 .what-we-do {
     background-color: white;
+    box-sizing: border-box;
     max-width: 100%;
     height: 694px ;
     padding: 20px;
@@ -155,8 +167,12 @@ button:hover button:active {
     margin-top: 50px;
 }
 .p-what-we-do p {
+    display: flex;
+    flex-direction: column;
     font-size: 16px;
     margin-bottom: 90px;
+    top: 382px;
+    left: 910px;
     width: 637px;
     height: 104px;
     margin: 0;
@@ -229,7 +245,7 @@ button:hover button:active {
 .holberton_school-icon-ic_sound::before {content: '\e90e' ;}
 .holberton_school-icon-ic_video::before {content: '\e910';}
 .holberton_school-icon-ic_music::before {content: '\e90d';}
-.holberton_school-icon-ic_hearing::before {content: '\e909';} 
+.holberton_school-icon-ic_hearing::before {content: '\e909';}
 .our-results {
     background-image: url(headphones_hero_2.jpg);
     background-repeat: no-repeat;
@@ -271,15 +287,15 @@ button:hover button:active {
     color: white;
     font-size: 16px;
     font-weight: normal;
+    max-width: 90%;
     width: 637px;
     height: 104px;
     left: 382px;
     top: 221px;
 }
 .the-results {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 76px;
     padding: 20px;
     width: 100%;
@@ -379,11 +395,46 @@ button:hover button:active {
     font-weight: normal;
     font-style: normal;
 }
+@media (max-width: 1024px) {
+    .our-results {
+        padding: 40px 20px;
+    }
+    .the-results {
+        grid-template-columns: repeat(2, 1fr);
+    }
 @media (max-width: 768px) {
+    .main-banner {
+        background-size: cover; /
+    }
     .hamburger {
         flex-direction: column;
         align-items: center;
         display: flex;
+    }
+    .nav-links-container {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        visibility: hidden;  
+    }
+        #menu-toggle:checked + .hamburger + .nav-links-container {
+        max-height: 300px;
+        opacity: 1;
+        visibility: visible;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin: 20px 0;
     }
     .icons-grid {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -414,16 +465,125 @@ button:hover button:active {
         max-width: 90%;
         padding: 10px;
     }
-}
+    .icons-grid {
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    }
+    .icons i {
+        font-size: 40px;
+    }
+    .icons {
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
+    }
+    .main-header h1 {
+        font-size: 24px;
+    }
+    .main-header h2 {
+        font-size: 14px;
+    }
+    .banner-paragraph p {
+        max-width: 90%;
+        padding: 10px;
+    }
+    .what-we-do {
+        padding: 20px 20px;
+    }
+    .p-what-we-do p {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 20px;
+        }
+    .our-results {
+        padding: 20px 20px;
+    }
+    .the-results {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
 @media (max-width: 480px) {
+    .main-banner {
+        background-size: cover; 
+        background-position: center top; 
+        padding: 10px; 
+    }
+    .nav-links-container {
+        top: 60px; 
+    }
+    .nav-links a {
+        font-size: 14px; 
+    }
+    .logo {
+        width: 140px; 
+        height: auto;
+    }
     .main-header h1 {
         font-size: 20px;
+        max-width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        max-width: 90%;
     }
     .main-header h2 {
         font-size: 12px;
+        text-align: center;
+        margin: 0 auto;
+        max-width: 90%;
+    }
+    .call-to-action-button {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 90%;
     }
     .banner-paragraph p {
         font-size: 14px;
+        text-align: center;
+        margin: 0 auto;
+        max-width: 90%;
+    }
+    .icons-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .icons {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    .icons i {
+        font-size: 40px;
+    }
+    .what-we-do {
+        padding:800px 20px;
+        margin-top: 20px;
+    }
+    .p-what-we-do p {
+        text-align: center;
+        padding: auto;
+        margin-left: auto;
+        margin-right: 90px;
+        margin-top: 20px;
+        max-width: 90%;
+    }
+    .our-results {
+        padding: 20px 20px;
+    }
+    .the-results {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .specific-result {
+        flex: 1 1 100%;
         max-width: 100%;
+        margin-bottom: 20px;
+    }
+    .our-results-header h1 {
+        font-size: 24px;
+    }
+    .our-results-paragraph p {
+        font-size: 14px;
+    }
+    .contact-us-header h1 {
+        font-size: 24px;
     }
 }
