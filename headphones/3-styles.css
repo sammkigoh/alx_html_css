@@ -402,6 +402,7 @@ button:hover button:active {
     .the-results {
         grid-template-columns: repeat(2, 1fr);
     }
+}
 @media (max-width: 768px) {
     .main-banner {
         background-size: cover; /
@@ -502,6 +503,7 @@ button:hover button:active {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
+}
 @media (max-width: 480px) {
     .main-banner {
         background-size: cover; 
