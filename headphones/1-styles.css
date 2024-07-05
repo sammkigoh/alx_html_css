@@ -4,13 +4,13 @@ body {
     box-sizing: border-box;
     max-width: 100%;
     font-family: Source Sans Pro;
+    width: 100%;
+    overflow-x: hidden;
 }
 .navigation-bar {
-    position: absolute;
     display: flex;
     justify-content: space-between;
-    padding-top: 27px;
-    padding-right: 200px;
+    padding: 15px 20px;
     top: 0;
     left: 0;
     width: 100%;
@@ -53,6 +53,7 @@ body {
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
+    order: -1;
 }
 .hamburger span {
     width: 25px;
@@ -73,6 +74,8 @@ body {
     justify-content: center;
     text-align: center;
     position: relative;
+    padding: 20px;
+    width: 100%;
 }
 .content-wrapper {
     display: flex;
